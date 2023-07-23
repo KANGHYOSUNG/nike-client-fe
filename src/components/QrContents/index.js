@@ -29,7 +29,7 @@ function QrContents() {
         let assets = await API.postAssets("QR",0,"","QR","");
 
         setAsset(assets);
-        setQrUrl(`https://nike-by-hongdae.du.r.appspot.com/static/upload.html?custom_id=${assets.custom_id}`)
+        setQrUrl(`http://nsh-2f.event-pages.com:5000/static/upload.html?custom_id=${assets.custom_id}`)
     }
 
     useEffect(() => {

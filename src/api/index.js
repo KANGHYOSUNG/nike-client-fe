@@ -1,4 +1,5 @@
-const BASE_URL = "http://localhost:5000/"
+// const BASE_URL = "http://localhost:5000/" //https://nike-by-hongdae.du.r.appspot.com/"
+const BASE_URL = "http://nsh-2f.event-pages.com:5000/"
 
 // 공통적으로 사용하는 경우, request 정의.
 const request = async (
