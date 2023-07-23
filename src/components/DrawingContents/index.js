@@ -173,9 +173,10 @@ function DrawingContents() {
             type: "image/png"
         });
         const file = new File([blob], new Date().getTime() + type + ".png");
-        await API.uploadImage(file);
-
-        return {img: "https://storage.googleapis.com/nike-by-hongdae-front/"+file.name}
+        const formData = new FormData();
+        formData.append('images', file);
+        await API.uploadImage(file)
+        return {img: "http://localhost:5000/static/img/"+file.name};
 
     }
 

@@ -1,4 +1,5 @@
 // const BASE_URL = "http://localhost:5000/" //https://nike-by-hongdae.du.r.appspot.com/"
+// const BASE_URL = "http://nsh-2f.event-pages.com:5000/"
 const BASE_URL = "http://nsh-2f.event-pages.com:5000/"
 
 // 공통적으로 사용하는 경우, request 정의.
@@ -37,35 +38,18 @@ const postAssets = (category, price, img, name, img_back) => {
 
 // Form 경우 fetch 정의
 const uploadImage = async images => {
-    alert('uploadImage' + BASE_URL)
-    const {url} = await (await fetch(BASE_URL + 'signed', {
-        method: "POST",
-        headers: {
-            // content type = multipart를 넣지 않고 서버에서 해석 하도록 Content-type 정의 하지 않음
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": 'no-cors'
-        },
-        body: JSON.stringify({"images":[images.name]})
-    })).json()
-
-    const xhr = new XMLHttpRequest();
-    xhr.open('PUT', url);
-    xhr.onload = () => {
-        if (xhr.status === 200) {
-            // 성공
-            return {img: "/"+images}
-        } else {
-            return false
-        }
-    };
-    // xhr.upload.onprogress = ()=>{};
-    // @ts-ignore
-    xhr.onerror = () => {
-        // 오류 발생
-        alert('업로드중 오류가 발생했습니다. 다시 시도해주세요.')
-    };
-    xhr.setRequestHeader('Content-Type', "application/octet-stream")
-    xhr.send(images);
+    console.log(images)
+    const {url} = (
+        await fetch(BASE_URL + 'signed', {
+            method: 'POST',
+            headers: {
+                // content type = multipart를 넣지 않고 서버에서 해석 하도록 Content-type 정의 하지 않음
+                'Access-Control-Allow-Origin': 'no-cors'
+            },
+            body: formData
+        })
+    ).json()
+    return url;
 }
 
 const postOrder = (name, phone, is_agreed, option_id, category, assets, img, img_back, work_img, work_img_back) => {
