@@ -176,7 +176,7 @@ function DrawingContents() {
         const formData = new FormData();
         formData.append('images', file);
         await API.uploadImage(formData)
-        return {img: "http://localhost:5000/static/img/"+file.name};
+        return {img: "https://nsh-2f-flask.event-pages.com/static/img/"+file.name};
 
     }
 
