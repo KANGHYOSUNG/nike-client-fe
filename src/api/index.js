@@ -1,6 +1,6 @@
 // const BASE_URL = "http://localhost:5000/" //https://nike-by-hongdae.du.r.appspot.com/"
 // const BASE_URL = "http://nsh-2f.event-pages.com:5000/"
-const BASE_URL = "http://nsh-2f.event-pages.com:5000/"
+const BASE_URL = "https://nsh-2f-flask.event-pages.com/"
 
 // 공통적으로 사용하는 경우, request 정의.
 const request = async (
@@ -46,7 +46,7 @@ const uploadImage = async images => {
                 // content type = multipart를 넣지 않고 서버에서 해석 하도록 Content-type 정의 하지 않음
                 'Access-Control-Allow-Origin': 'no-cors'
             },
-            body: formData
+            body: images
         })
     ).json()
     return url;
