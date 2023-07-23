@@ -1,0 +1,23 @@
+.LayoutContainer {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+    min-height: 136px;
+    margin: 0 auto;
+    padding: 16px;
+    background: #ffffff;
+    i {position: absolute; display: block; width: 40px; height: 40px;}
+    i:first-child {top: 0; left: 0; border-top: 2px solid #000000; border-left: 2px solid #000000;}
+    i:nth-child(2) {top: 0; right: 0; border-top: 2px solid #000000; border-right: 2px solid #000000;}
+    i:nth-child(3) {bottom: 0; right: 0; border-bottom: 2px solid #000000; border-right: 2px solid #000000;}
+    i:nth-child(4) {bottom: 0; left: 0; border-bottom: 2px solid #000000; border-left: 2px solid #000000;}
+
+    @media screen and (max-width: 1620px) {
+        min-height: calc(100vw*(136/1620));
+        padding: calc(100vw*(16/1620));
+        & i {width: calc(100vw*(40/1620)); height: calc(100vw*(40/1620));}
+    }
+}

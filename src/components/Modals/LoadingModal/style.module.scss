@@ -1,0 +1,68 @@
+// tablete
+.LoadingModalWrap {
+
+  position: fixed; left: 0;
+  bottom:calc(-100vw*(60/1620));
+  width: 100%; height: 100vh;
+  background-color: white;
+  background-image: url('/resources/image/background/line.png');
+  background-position: 50% -103px;
+  background-size: 1920px;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  z-index: 9999999;
+
+  .LoadingContent {
+    position: fixed; top: 50%; left: 50%;
+    width: 952px;
+    transform: translate(-50%,-50%);
+
+    .LoadingBox {
+      width: 100%;
+      padding: 95px 154px 115px;
+      background: #fff;
+      & h3 {
+        font-size: 44px;
+        font-weight: 300;
+        font-family:'Neue';
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      & div {
+        display: flex; align-items: center; justify-content: flex-start; gap: 5px;
+        width: 644px; height: 60px;
+        margin: 0 auto;
+        padding: 11px 12px;
+        background: url('/resources/icon/loading_box.svg') no-repeat center/contain;
+        & img {
+          width: 27px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1620px) {
+    background-image: url('/resources/image/background/line_mb.svg');
+    background-size: 100%;
+    background-position: 50% calc(100vw*(-100/1620));
+    .LoadingContent {
+      width: calc(100vw*(1368/1620));
+      
+      .LoadingBox {
+        width: 100%;
+        padding: calc(100vw*(95/1620)) calc(100vw*(154/1620)) calc(100vw*(115/1620));
+        & h3 {
+          font-size: calc(100vw*(60/1620));
+          margin-bottom: calc(100vw*(10/1620));
+        }
+        & div {
+          gap: calc(100vw*(5/1620));
+          width: calc(100vw*(720/1620)); height: calc(100vw*(74/1620));
+          padding: calc(100vw*(11/1620)) calc(100vw*(12/1620));
+          & img {
+            width: calc(100vw*(32/1620));
+          }
+        }
+      }
+    }
+  }
+}

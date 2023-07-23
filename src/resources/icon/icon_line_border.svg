@@ -1,0 +1,22 @@
+<svg id="구성_요소_33_1" data-name="구성 요소 33 – 1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <rect id="사각형_5332" data-name="사각형 5332" width="40" height="40" fill="none"/>
+  <g id="그룹_10861" data-name="그룹 10861" transform="translate(1 1)">
+    <rect id="사각형_2201" data-name="사각형 2201" width="5.478" height="5.478" transform="translate(5.477 5.221)"/>
+    <rect id="사각형_2202" data-name="사각형 2202" width="5.478" height="5.478" transform="translate(5.477 26.88)"/>
+    <rect id="사각형_2203" data-name="사각형 2203" width="5.478" height="5.477" transform="translate(10.955 0.001)"/>
+    <rect id="사각형_2204" data-name="사각형 2204" width="5.478" height="5.477" transform="translate(16.433 0.001)"/>
+    <rect id="사각형_2205" data-name="사각형 2205" width="5.478" height="5.477" transform="translate(21.911 0.001)"/>
+    <rect id="사각형_2206" data-name="사각형 2206" width="5.478" height="5.477" transform="translate(10.955 32.358)"/>
+    <rect id="사각형_2207" data-name="사각형 2207" width="5.478" height="5.477" transform="translate(16.433 32.358)"/>
+    <rect id="사각형_2208" data-name="사각형 2208" width="5.478" height="5.477" transform="translate(21.911 32.358)"/>
+    <rect id="사각형_2209" data-name="사각형 2209" width="5.478" height="5.477" transform="translate(0 10.699)"/>
+    <rect id="사각형_2210" data-name="사각형 2210" width="5.478" height="5.478" transform="translate(0 16.176)"/>
+    <rect id="사각형_2211" data-name="사각형 2211" width="5.478" height="5.478" transform="translate(0 21.654)"/>
+    <rect id="사각형_2212" data-name="사각형 2212" width="5.477" height="5.478" transform="translate(27.388 26.88)"/>
+    <rect id="사각형_2213" data-name="사각형 2213" width="5.477" height="5.478" transform="translate(27.388 5.221)"/>
+    <rect id="사각형_2214" data-name="사각형 2214" width="5.478" height="5.478" transform="translate(32.865 21.402)"/>
+    <rect id="사각형_2215" data-name="사각형 2215" width="5.478" height="5.478" transform="translate(32.865 15.924)"/>
+    <rect id="사각형_2216" data-name="사각형 2216" width="5.478" height="5.478" transform="translate(32.865 10.446)"/>
+    <path id="패스_10465" data-name="패스 10465" d="M36.765,14.6V30.779H31.289v5.478H14.855V30.779H9.378V14.6h5.477V9.378H31.289V14.6Z" transform="translate(-3.9 -3.9)" fill="#fff"/>
+  </g>
+</svg>

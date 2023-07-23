@@ -1,0 +1,273 @@
+.OrderDetailWrap {
+    width: 100%;
+    .OrderDetailInner {
+        width: 100%;
+        margin: 0 auto;
+        .DetailTitle {
+            display: flex; align-items: center; justify-content: center;
+            h2 {
+                display: inline-block;
+                font-size: 70px;
+                text-align: center;
+                // margin-top: 150px;
+                padding: 36px;
+                background: #fff;
+            }
+        }
+    }
+    @media screen and (max-width: 1620px) {
+        .OrderDetailInner {
+            // width: calc(100vw*(804/1620));
+            .DetailTitle {
+                h2 {
+                    font-size: calc(100vw*(70/1620));
+                    // margin-top: calc(100vw*(150/1620));
+                    padding: calc(100vw*(36/1620));
+                }
+            }
+        }
+    }
+}
+.PriceWrapper {
+    position: relative;
+    width: 100%;
+    margin: 100px auto 100px;
+    border: 2px solid #000000;
+    .BorderBox {
+        position: absolute;
+        display: block;
+        width: 100px; height: 100px;
+        &:nth-child(1) {top: -4.5px; left: -4.5px; border-top: 8px solid #000; border-left: 8px solid #000;}
+        &:nth-child(2) {top: -4.5px; right: -4.5px; border-top: 8px solid #000; border-right: 8px solid #000;}
+        &:nth-child(3) {bottom: -4.5px; right: -4.5px; border-bottom: 8px solid #000; border-right: 8px solid #000;}
+        &:nth-child(4) {bottom: -4.5px; left: -4.5px; border-bottom: 8px solid #000; border-left: 8px solid #000;}
+    }
+    
+    @media screen and (max-width: 1620px) {
+        margin: calc(100vw*(100/1620)) auto calc(100vw*(100/1620));
+        .BorderBox {
+            width: calc(100vw*(100/1620)); height: calc(100vw*(100/1620));
+            &:nth-child(1) {top: calc(100vw*(-8/1620)); left: calc(100vw*(-8/1620)); border-top: 6px solid #000; border-left: 6px solid #000;}
+            &:nth-child(2) {top: calc(100vw*(-8/1620)); right: calc(100vw*(-8/1620)); border-top: 6px solid #000; border-right: 6px solid #000;}
+            &:nth-child(3) {bottom: calc(100vw*(-8/1620)); right: calc(100vw*(-8/1620)); border-bottom: 6px solid #000; border-right: 6px solid #000;}
+            &:nth-child(4) {bottom: calc(100vw*(-8/1620)); left: calc(100vw*(-8/1620)); border-bottom: 6px solid #000; border-left: 6px solid #000;}
+        }
+    }
+}
+.CustomBox {
+    width: 100%; height: 705px;
+    margin: 0 auto;
+    border: 1px solid #000000;
+    background: #ffffff;
+    
+    @media screen and (max-width: 1620px) {
+        height: calc(100vw*(600/1620));
+    }
+}
+.TabWrap {
+    width: 100%;
+    margin-bottom: 65px;
+    
+    @media screen and (max-width: 1620px) {
+        width: calc(100vw*(1368/1620));
+        margin: 0 auto calc(100vw*(65/1620));
+    }
+}
+.TabButtonBox {
+    position: relative;
+    width: 100%; height: 60px;
+    margin-top: 30px;
+    & > .TabButton {
+        position: absolute; bottom: 0; left: 0;
+        display: flex;
+        align-items: center;
+        width: 50%; height: 50px;
+        padding: 0 50px;
+        background: #EBEBEC;
+        border: 2px solid #000000;
+        border-bottom: none;
+        box-sizing: border-box;
+        cursor: pointer;
+    
+        // active css
+        &:first-child {width: auto; height: 55px; background: #04F404; z-index: 2;}
+        p {font-size: 30px;}
+        p:first-child {font-weight: bold; margin-right: 22px; font-family:'HelveticaNeue'; font-size: 32px;}
+    }
+  
+    @media screen and (max-width: 1620px) {
+        height: calc(100vw*(60/1620));
+        margin-top: calc(100vw*(30/1620));
+        & > .TabButton {
+        height: calc(100vw*(50/1620));
+        padding: 0 calc(100vw*(50/1620));
+        
+        // active css
+        &:first-child {height: calc(100vw*(55/1620));}
+        // 
+    
+        p {font-size: calc(100vw*(34/1620));}
+        p:first-child {font-weight: bold; margin-right: calc(100vw*(35/1620)); font-size: calc(100vw*(36/1620));}
+        }
+    }
+}
+.TabArea {
+    width: 100%; height: 238px;
+    border: 2px solid #000000;
+    background: #ffffff;
+    
+    @media screen and (max-width: 1620px) {
+        height: calc(100vw*(238/1620));
+    }
+}
+.PenBox {
+    position: relative;
+    width: 348px; height: 100%;
+    overflow: hidden;
+    & img {
+        position: absolute; bottom: -50px;
+        cursor: pointer;
+        &:first-child {left: 50px; width: 54px;}
+        &:nth-child(2) {left: 120px; width: 54px;}
+        &:last-child {left: 190px; width: 54px;}
+    }
+    
+    @media screen and (max-width: 1620px) {
+        height: calc(100vw*(214/1620));
+    }
+}
+
+.TotalPriceBox {
+    width: 700px;
+    padding: 40px;
+    font-size: 48px;
+    font-weight: 500;
+    text-align: center;
+    background: #ffffff;
+    margin: 0 auto 140px;
+    .PriceTextBox {
+        width: 100%;
+        padding: 25px 0;
+        .TotalPrice {
+            width: 100%;
+            font-size: 48px;
+            text-align: center;
+        }
+        .PriceSub {
+            width: 100%;
+            font-size: 24px;
+            text-align: center;
+        }
+    }
+    
+    @media screen and (max-width: 1620px) {
+        width: calc(100vw*(740/1620));
+        padding: calc(100vw*(40/1620));
+        font-size: calc(100vw*(48/1620));
+        margin: 0 auto calc(100vw*(80/1620));
+        .PriceTextBox {
+            padding: calc(100vw*(25/1620)) 0;
+            .Price {
+                font-size: calc(100vw*(52/1620));
+            }
+            .PriceSub {
+                font-size: calc(100vw*(30/1620));
+            }
+        }
+    }
+}
+.PriceSub {
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+    
+    @media screen and (max-width: 1620px) {
+        font-size: calc(100vw*(28/1620));
+    }
+}
+
+.PriceBox {
+    width: 100%;
+    padding: 35px;
+    background-color: #ffffff;
+    .PriceRow {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 100%;
+        padding: 60px 35px 60px 0;
+        border-bottom: 2px solid #000000;
+        &:last-child {border: none;}
+        
+        .Price {
+            p {font-size: 38px;}
+            span {font-size: 24px;}
+            
+            .PriceInner {
+                width: 300px;
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                &:first-child {margin-bottom: 18px;}
+            }
+        }
+    }
+
+    .PriceTitleBox {
+        p {
+            font-size: 25px;
+            font-weight: 500;
+            text-align: left;
+            &:first-child {
+                font-size: 42px;
+                font-weight: 900;
+                font-family:'HelveticaNeue_bold';
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1620px) {
+        width: 100%;
+        padding: calc(100vw*(35/1620));
+
+        .PriceRow {
+            padding: calc(100vw*(60/1620)) calc(100vw*(35/1620)) calc(100vw*(60/1620)) 0;
+            .Price {
+                
+                text-align: right;
+                p {width: max-content; font-size: calc(100vw*(42/1620));}
+                span {font-size: calc(100vw*(32/1620));}
+        
+                .PriceInner {
+                    width: calc(100vw*(300/1620));
+                    &:first-child {margin-bottom: calc(100vw*(18/1620));}
+                }
+            }
+        }
+        .PriceTitleBox {
+            p {
+                font-size: calc(100vw*(27/1620));
+                &:first-child {
+                    font-size: calc(100vw*(46/1620));
+                    margin-bottom: calc(100vw*(8/1620));
+                }
+            }
+        }
+    }
+
+    // PriceLineTitle----
+    .PriceLineTitle {
+        width: 100%; 
+        border-bottom: 2px solid #000000;
+        & p {
+            font-size: calc(100vw*(32/1620));
+            font-family: 'HelveticaNeue_bold';
+            font-weight: bold;
+            text-align: center;
+            margin-top: calc(100vw*(60/1620));
+            padding-bottom: calc(100vw*(20/1620));
+        }
+    }
+    // ----end
+}

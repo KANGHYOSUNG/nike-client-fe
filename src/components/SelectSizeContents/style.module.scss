@@ -1,0 +1,45 @@
+.Container {
+    width: 100%;
+}
+.SizeBox {
+    position: absolute; 
+    top: 52px; 
+    right: 52px;
+
+    button {
+        padding-top: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px; 
+        height: 48px;
+        padding: auto 0;
+        background: #fff;
+        border: 1px solid #000000;
+        border-bottom: none;
+        font-size: 30px;
+        font-weight: 900;
+        text-align: center;
+        font-family:'HelveticaNeue';
+        box-sizing: border-box;
+        color: #686868;
+        cursor: pointer;
+        border-bottom: none;
+        z-index: 9999;
+        &:last-child {border-bottom: 1px solid #000000;}
+    }
+
+    .Active {
+        background: #000000; color: #ffffff;
+    }
+
+    @media screen and (max-width: 1620px) {
+        top: calc(100vw*(52/1620)); right: calc(100vw*(52/1620));
+        button {
+            font-size: calc(100vw*(32/1620));
+            width: calc(100vw*(56/1620)); 
+            height: calc(100vw*(56/1620));
+            line-height: 1;
+        }
+    }
+}

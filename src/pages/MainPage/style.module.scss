@@ -1,0 +1,104 @@
+@import 'scss/style.minxin.scss';
+
+// common tablete
+.MainContainer {
+    @include Container();
+    width: 100%;
+    background: url('/resources//image/main_image.png') no-repeat center bottom/1368px;
+}
+
+
+// common mobile
+@media screen and (max-width: 1620px) {
+    .MainContainer {width: 100%; min-height: 100vh; padding-bottom: 0;
+        background: url('/resources//image/main_image.png') no-repeat center bottom calc(100vw*(-20/1620)) /100%;}
+}
+// @media screen and (max-width: 1620px) {
+//     .MainContainer {width: 100%; height: 100vh; padding-bottom: 0;
+//         background: url('/resources//image/main_image.png') no-repeat center bottom/100%;}
+// }
+
+// tablete
+.MainWrap {
+    width: 952px; min-height: 100vh; height: 2100px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1620px) {
+        width: calc(100vw*(900/1620)); height: calc(100vw*(2100/1620));
+    }
+}
+
+
+.MainSection {
+    position: relative;
+    width: 100%;
+    padding: 150px 0;
+
+    @media screen and (max-width: 1620px) {
+        padding: calc(100vw*(120/1620)) 0;
+    }
+}
+.ColorBar {
+    position: absolute; top: 45px; left: 50%;
+    width: 52px;
+    margin-left: -735px;
+    @media screen and (max-width: 1620px) {
+        top: calc(100vw*(70/1620));
+        width: calc(100vw*(52/1620));
+        margin-left: calc(100vw*(-735/1620));
+    }
+}
+.Logo {
+    width: 100%;
+    margin-bottom: 70px;
+    padding: 22px;
+
+    @media screen and (max-width: 1620px) {
+        margin-bottom: calc(100vw*(40/1620));
+        padding: calc(100vw*(22/1620));
+    }
+}
+.StartSection {
+    position: relative;
+    width: 760px;
+    margin: 540px auto 85px;
+    img {width: 100%;}
+    p {
+        position: absolute; top: 53%; left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 60px;
+        font-family:'HelveticaNeue_bold';
+        font-weight: 900;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 1620px) {
+        width: calc(100vw*(760/1620));
+        margin: calc(100vw*(570/1620)) auto calc(100vw*(85/1620));
+        p {
+            font-size: calc(100vw*(95/1620));
+        }
+    }
+}
+.StartTextBox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: auto;
+    p {
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 1.42;
+        padding: 22px;
+        background-color: #ffffff;
+    }
+
+    @media screen and (max-width: 1620px) {
+        p {
+            font-size: calc(100vw*(40/1620));
+            padding: calc(100vw*(22/1620));
+        }
+    }
+}

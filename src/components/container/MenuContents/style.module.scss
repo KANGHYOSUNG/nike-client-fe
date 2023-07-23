@@ -1,0 +1,71 @@
+.MenuWrapper {
+    width: 945px;
+    margin: 0 auto ;
+    padding-top: 125px;
+    padding-bottom: 200px;
+
+    @media screen and (max-width: 1620px) {
+        width: 100%;
+        margin: 0 auto;
+        padding-top: calc(100vw*(50/1620));
+        padding-bottom: calc(100vw*(20/1620));
+    }
+}
+.Logo {
+    width: 100%;
+    margin-bottom: 70px;
+
+    @media screen and (max-width: 1620px) {
+        margin-bottom: calc(100vw*(70/1620));
+    }
+}
+.MenuTextBox {
+    padding: 15px;
+    background: #ffffff;
+    
+    @media screen and (max-width: 1620px) {
+        padding: calc(100vw*(15/1620));
+    }
+}
+.MenuTitle {
+    font-size: 48px;
+    font-family:'HelveticaNeue_bold';
+    font-weight: 900;
+    text-align: center;
+    
+    @media screen and (max-width: 1620px) {
+        font-size: calc(100vw*(52/1620));
+    }
+}
+.MenuText {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    
+    @media screen and (max-width: 1620px) {
+        font-size: calc(100vw*(24/1620));
+    }
+}
+.MenuTextWrap {
+    cursor: pointer;
+}
+.StartTextBox {
+    background-color: #ffffff;
+    padding: 22px;
+    margin-bottom: 50px;
+    p {
+        width: 100%;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 1.42;
+    }
+    
+    @media screen and (max-width: 1620px) {
+        padding: calc(100vw*(22/1620));
+        margin-bottom: calc(100vw*(50/1620));
+        p {
+            font-size: calc(100vw*(34/1620));
+        }
+    }
+}

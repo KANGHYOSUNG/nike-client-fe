@@ -1,0 +1,102 @@
+.Blank {
+    position: fixed; top: 0; left: 0;
+    z-index: 80;
+    width: 100%; height: 100vh;
+}
+.Container {
+    display: flex;
+    flex-direction: column;
+    position: fixed; left: 50%; bottom: 0;
+    width: 1368px; height: 60vh;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    background: #fff;
+    z-index: 100;
+    transform: translateX(-50%);
+    padding: 0 200px;
+
+    @media screen and (max-width: 1620px) {
+        width: calc(100vw*(1368/1620)); height: 60vh;
+        padding: 0 calc(100vw*(200/1620));
+    }
+}
+.ColorBox {
+    cursor: crosshair;
+    width: 100%; height: 30vh;
+    position: relative;
+    user-select: none;
+    user-drag: none;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    margin-top: 100px;
+
+    @media screen and (max-width: 1620px) {
+        margin-top: calc(100vh*(120/1620));
+    }
+}
+.SelectColorBox {
+    width: 230px; height: 80px;
+    background: #FB0000;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    margin-top: 40px;
+
+    @media screen and (max-width: 1620px) {
+        width: calc(100vw*(300/1620)); height: 8vh;
+        margin-top: calc(100vh*(40/1620));
+    }
+}
+.SpectrumLayer {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+      to right,
+      rgb(255,0,0),
+      rgb(255,255,0),
+      rgb(0,255,0),
+      rgb(0,255,255),
+      rgb(0,0,255),
+      rgb(255,0,255),
+      rgb(255,0,0)
+    );
+}
+  
+.SaturationWhite {
+    background: -webkit-linear-gradient(to top, rgba(255, 255, 255, 0), #fff);
+    background: linear-gradient(to top, rgba(255, 255, 255, 0), #fff);
+    position: absolute;
+    width: 100%; height: 60px;
+    top: 0px; right: 0px; bottom: 60px; left: 0px;
+
+    @media screen and (max-width: 1620px) {
+        height: calc(100vw*(230/1620));
+        bottom: calc(100vw*(60/1620));
+    }
+}
+  
+.SaturationBlack {
+    background: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    top: 60px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+
+    @media screen and (max-width: 1620px) {
+        height: calc(100vw*(300/1620));
+        top: auto;
+    }
+}
+.ClosedBtnImg {
+    position: absolute; top: 30px; right: 30px;
+    width: 50px;
+    cursor: pointer;
+
+    @media screen and (max-width: 1620px) {
+        top: calc(100vw*(30/1620)); right: calc(100vw*(30/1620));
+        width: calc(100vw*(80/1620));
+    }
+}

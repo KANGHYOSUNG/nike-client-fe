@@ -1,0 +1,128 @@
+.Container {
+    width: 100%;
+    padding-top: 125px;
+
+    @media screen and (max-width: 1620px) {
+        width: 100%;
+        padding-top: calc(100vw*(50/1620));
+    }
+}
+.PriceWrapper {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    border: 2px solid #000000;
+    margin-bottom: 200px;
+    .BorderBox {
+        position: absolute;
+        display: block;
+        width: 100px; height: 100px;
+        &:nth-child(1) {top: -4.5px; left: -4.5px; border-top: 8px solid #000; border-left: 8px solid #000;}
+        &:nth-child(2) {top: -4.5px; right: -4.5px; border-top: 8px solid #000; border-right: 8px solid #000;}
+        &:nth-child(3) {bottom: -4.5px; right: -4.5px; border-bottom: 8px solid #000; border-right: 8px solid #000;}
+        &:nth-child(4) {bottom: -4.5px; left: -4.5px; border-bottom: 8px solid #000; border-left: 8px solid #000;}
+    }
+    
+    @media screen and (max-width: 1620px) {
+        width: calc(100vw*(960/1620));
+        margin-bottom: calc(100vw*(200/1620));
+        .BorderBox {
+            width: calc(100vw*(100/1620)); height: calc(100vw*(100/1620));
+            &:nth-child(1) {top: calc(100vw*(-8/1620)); left: calc(100vw*(-8/1620)); border-top: 6px solid #000; border-left: 6px solid #000;}
+            &:nth-child(2) {top: calc(100vw*(-8/1620)); right: calc(100vw*(-8/1620)); border-top: 6px solid #000; border-right: 6px solid #000;}
+            &:nth-child(3) {bottom: calc(100vw*(-8/1620)); right: calc(100vw*(-8/1620)); border-bottom: 6px solid #000; border-right: 6px solid #000;}
+            &:nth-child(4) {bottom: calc(100vw*(-8/1620)); left: calc(100vw*(-8/1620)); border-bottom: 6px solid #000; border-left: 6px solid #000;}
+        }
+    }
+}
+.PriceBox {
+    width: 100%;
+    padding: 0 35px;
+    background-color: #ffffff;
+    overflow-y: auto;
+    height: 55vh;
+
+    .PriceRow {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 100%;
+        padding: 60px 35px 60px 0;
+        border-bottom: 2px solid #000000;
+        &:last-child {border: none;}
+        
+        .Price {
+            p {
+                font-size: 38px;
+                & span {font-size: 38px; font-family:'HelveticaNeue';}
+            }
+            span {font-size: 24px;}
+            
+            .PriceInner {
+                width: 300px;
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                &:first-child {margin-bottom: 18px;}
+            }
+        }
+    }
+
+    .PriceTitleBox {
+        p {
+            font-size: 25px;
+            font-weight: 500;
+            text-align: left;
+            font-family: 'helveticaneue_m';
+            &:first-child {
+                font-size: 42px;
+                font-weight: 900;
+                font-family:'HelveticaNeue_bold';
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1620px) {
+        width: 100%;
+        padding: 0 calc(100vw*(35/1620));
+
+        .PriceRow {
+            padding: calc(100vw*(60/1620)) calc(100vw*(35/1620)) calc(100vw*(60/1620)) 0;
+            .Price {
+                p {
+                    font-size: calc(100vw*(42/1620));
+                    & span {font-size: calc(100vw*(32/1620));}
+                }
+                span {font-size: calc(100vw*(24/1620));}
+        
+                .PriceInner {
+                    width: calc(100vw*(300/1620));
+                    &:first-child {margin-bottom: calc(100vw*(18/1620));}
+                }
+            }
+        }
+        .PriceTitleBox {
+            p {
+                font-size: calc(100vw*(29/1620));
+                &:first-child {
+                    font-size: calc(100vw*(48/1620));
+                    margin-bottom: calc(100vw*(8/1620));
+                }
+            }
+        }
+    }
+    // PriceLineTitle----
+    .PriceLineTitle {
+        width: 100%; border-bottom: 2px solid #000000;
+        & p {
+            font-size: calc(100vw*(32/1620));
+            font-family: 'HelveticaNeue_bold';
+            font-weight: bold;
+            text-align: center;
+            margin-top: calc(100vw*(60/1620));
+            padding-bottom: calc(100vw*(20/1620));
+        }
+    }
+    // ----end
+}

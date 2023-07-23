@@ -1,0 +1,55 @@
+.CustomWrap {
+    width: 100%;
+    .CustomInner {
+        width: 1256px; margin: 0 auto;
+    
+        .Canvas {
+            position:absolute;
+            width: 100%; 
+            height: 100%;
+            z-index: 12;
+            display: flex;
+        }
+    }
+
+    @media screen and (max-width: 1620px) {
+        .CustomInner {width: calc(100vw*(1250/1620));}
+    }
+}
+.CustomBox {
+    width: 100%; height: 705px;
+    margin: 0 auto;
+    border: 1px solid #000000;
+    background: #ffffff;
+    
+    @media screen and (max-width: 1620px) {
+        height: calc(100vw*(600/1620));
+    }
+}
+.DesignListBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    div {
+        width: 160px; height: 160px;
+        margin-right: 60px;
+        margin-bottom: 30px;
+        opacity: 0.15;
+        &:nth-child(5n) {margin-right: 0;}
+        img {width: 100%; height: 100%; object-fit: contain;}
+    }
+    
+    .active {
+        opacity: 1;
+    }
+
+    @media screen and (max-width: 1620px) {
+        div {
+            width: calc(100vw*(160/1620)); height: calc(100vw*(160/1620));
+            margin-right: calc(100vw*(60/1620));
+            margin-bottom: calc(100vw*(30/1620));
+        }
+    }
+}

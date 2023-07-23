@@ -1,0 +1,22 @@
+.Container {
+    width: 100%;
+}
+
+.ColorBox {
+    position: absolute; top: 52px; right: 52px;
+    z-index: 10;
+    div {
+        width: 48px; height: 48px;
+        background: #fff;
+        border: 1px solid #000000;
+        cursor: pointer;
+        &:last-child {background: #000000;}
+    }
+
+    @media screen and (max-width: 1620px) {
+        top: calc(100vw*(52/1620)); right: calc(100vw*(52/1620));
+        div {
+            width: calc(100vw*(56/1620)); height: calc(100vw*(56/1620));
+        }
+    }
+}

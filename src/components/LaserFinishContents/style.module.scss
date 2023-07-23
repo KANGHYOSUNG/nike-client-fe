@@ -1,0 +1,215 @@
+.CustomWrap {
+    width: 100%;
+    .CustomInner {width: 1256px; margin: 0 auto;}
+    .ResetBtn {
+        position: absolute; bottom: 43px; right: 43px;
+        width: 56px; height: auto;
+        cursor: pointer;
+        z-index: 13;
+    }
+    .DeleteBtn {
+        position: absolute; bottom: 43px; right: 43px;
+        width: 56px; height: auto;
+        cursor: pointer;
+        z-index: 13;
+    }
+
+    @media screen and (max-width: 1620px) {
+        .ResetBtn {
+            bottom: calc(100vw*(43/1620)); right: calc(100vw*(43/1620));
+            width: calc(100vw*(60/1620)); height: auto;
+        }
+        .DeleteBtn {
+            bottom: calc(100vw*(130/1620)); right: calc(100vw*(43/1620));
+            width: calc(100vw*(60/1620)); height: auto;
+        }
+        .CustomInner {width: calc(100vw*(1250/1620));}
+    }
+
+    .ResultWrapper {
+        position: relative;
+        height: 100%;
+        
+        .BackgroundImage {
+            aspect-ratio: 1/1;
+            height: 100%;
+        }
+        .CustomImage {
+            width: 450px;
+            height: 100%;
+            // position: absolute;
+            aspect-ratio: 1/1;
+            z-index: 2;
+        }
+    }
+}
+.CustomBox {
+    width: 100%; height: 705px;
+    margin: 0 auto;
+    border: 1px solid #000000;
+    background: #ffffff;
+    
+    @media screen and (max-width: 1620px) {
+        height: calc(100vw*(600/1620));
+    }
+}
+.TabWrap {
+    width: 100%;
+    margin-bottom: 65px;
+    
+    @media screen and (max-width: 1620px) {
+        width: calc(100vw*(1368/1620));
+        margin: 0 auto calc(100vw*(65/1620));
+    }
+}
+.TabButtonBox {
+    position: relative;
+    width: 100%; height: 60px;
+    margin-top: 30px;
+    > .TabButton {
+        position: absolute; bottom: 0; left: 0;
+        display: flex;
+        align-items: center;
+        width: 50%; height: 50px;
+        padding: 0 50px;
+        background: #EBEBEC;
+        border: 2px solid #000000;
+        border-bottom: none;
+        box-sizing: border-box;
+        cursor: pointer;
+    
+        // active css
+        &:first-child {width: auto; height: 55px; background: #04F404; z-index: 2;}
+        p {font-size: 30px;}
+        p:first-child {font-weight: bold; margin-right: 22px; font-family:'HelveticaNeue'; font-size: 32px;}
+    }
+  
+    @media screen and (max-width: 1620px) {
+        height: calc(100vw*(60/1620));
+        margin-top: calc(100vw*(30/1620));
+        > .TabButton {
+        height: calc(100vw*(50/1620));
+        padding: 0 calc(100vw*(50/1620));
+        
+        // active css
+        &:first-child {height: calc(100vw*(55/1620));}
+        // 
+    
+        p {font-size: calc(100vw*(34/1620));}
+        p:first-child {font-weight: bold; margin-right: calc(100vw*(35/1620)); font-size: calc(100vw*(36/1620));}
+        }
+    }
+}
+.TabArea {
+    width: 100%; height: 238px;
+    border: 2px solid #000000;
+    background: #ffffff;
+    
+    @media screen and (max-width: 1620px) {
+        height: calc(100vw*(238/1620));
+    }
+}
+.PenBox {
+    position: relative;
+    width: 348px; height: 100%;
+    overflow: hidden;
+    img {
+        position: absolute; bottom: -50px;
+        cursor: pointer;
+        &:first-child {left: 50px; width: 54px;}
+        &:nth-child(2) {left: 120px; width: 54px;}
+        &:last-child {left: 190px; width: 54px;}
+    }
+    
+    @media screen and (max-width: 1620px) {
+        height: calc(100vw*(214/1620));
+    }
+}
+.PriceBox {
+    width: 686px;
+    padding: 40px;
+    font-size: 48px;
+    font-weight: 500;
+    text-align: center;
+    background: #ffffff;
+    margin: 0 auto 140px;
+    .PriceTextBox {
+        width: 100%;
+        padding: 25px 0;
+        
+        p {
+            span {
+                color:black;
+                text-align: center;
+            }
+        }
+        .Count {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 15px;
+            b {font-size: 40px; font-weight: normal;}
+            .CountBtn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 36px; height: 36px;
+                font-size: 20px;
+                margin: 0 16px;
+                background: #000; color: #ffffff;
+            }
+        }
+        .Price {
+            width: 100%;
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 15px;
+            b {font-weight: 900;}
+        }
+        .PriceSub {
+            width: 100%;
+            font-size: 24px;
+            text-align: center;
+            border-bottom: 1px solid #000000;
+            cursor: pointer;
+        }
+    }
+    
+    @media screen and (max-width: 1620px) {
+        width: calc(100vw*(700/1620));
+        padding: calc(100vw*(40/1620));
+        font-size: calc(100vw*(48/1620));
+        margin: 0 auto calc(100vw*(0/1620));
+        .PriceTextBox {
+            padding: calc(100vw*(25/1620)) 0;
+            .Count {
+                font-size: calc(100vw*(46/1620));
+                margin-bottom: calc(100vw*(32/1620));
+                b {font-size: calc(100vw*(46/1620));}
+                .CountBtn {
+                    width: calc(100vw*(45/1620)); height: calc(100vw*(45/1620));
+                    font-size: calc(100vw*(38/1620));
+                    margin: 0 calc(100vw*(20/1620));
+                }
+            }
+            .Price {
+                font-size: calc(100vw*(52/1620));
+            }
+            .PriceSub {
+                font-size: calc(100vw*(32/1620));
+            }
+        }
+    }
+}
+.PriceSub {
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+    
+    @media screen and (max-width: 1620px) {
+        font-size: calc(100vw*(28/1620));
+    }
+}

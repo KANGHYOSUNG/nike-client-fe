@@ -1,0 +1,65 @@
+// tablete
+.MainContainerWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.MenuWrapper {
+    width: 100%;
+    padding: 150px 0;
+
+    @media screen and (max-width: 1620px) {
+        padding: calc(100vw*(150/1620)) 0;
+    }
+}
+.Logo {
+    width: 100%;
+    margin-bottom: 70px;
+
+    @media screen and (max-width: 1620px) {
+        margin-bottom: calc(100vw*(70/1620));
+    }
+}
+.StartSection {
+    position: relative;
+    width: 100%;
+    margin-bottom: 85px;
+    img {width: 100%;}
+    p {
+        position: absolute; top: 50%; left: 0;
+        width: 100%;
+        padding-left: 135px;
+        text-align: center;
+        font-size: 60px;
+        font-family:'HelveticaNeue_bold';
+        font-weight: 900;
+        transform: translateY(-50%);
+    }
+
+    @media screen and (max-width: 1620px) {
+        margin-bottom: calc(100vw*(85/1620));
+        p {
+            padding-left: calc(100vw*(135/1620));
+            font-size: calc(100vw*(64/1620));
+        }
+    }
+}
+.StartTextBox {
+    background-color: #ffffff;
+    padding: 22px;
+    p {
+        width: 100%;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 1.42;
+    }
+
+    @media screen and (max-width: 1620px) {
+        padding: calc(100vw*(22/1620));
+        p {
+            font-size: calc(100vw*(34/1620));
+        }
+    }
+}

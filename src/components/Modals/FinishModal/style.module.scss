@@ -1,0 +1,114 @@
+// tablete
+.ModalContainer {
+  position: fixed; top: 50%; left: 50%;
+  width: 952px; min-height: 220px;
+  background: #ffffff;
+  border: 2px solid #000000;
+  padding-bottom: 60px;
+  transform: translate(-50%, -50%);
+
+  @media screen and (max-width: 1620px) {
+    width: calc(100vw*(952/1620)); min-height: calc(100vw*(220/1620));
+    padding-bottom: calc(100vw*(60/1620));
+  }
+}
+.ModalTop {
+  width: 100%; height: 30px;
+  background: #04F404 url('/resources/icon/icon_tab_logo.svg') no-repeat center/100%;
+
+  @media screen and (max-width: 1620px) {
+    height: calc(100vw*(45/1620));
+  }
+}
+.ModalContent {
+  width: 100%;
+  border-top: 2px solid #000000;
+  .ModalTitle {
+    width: 100%;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 55px;
+  }
+  .FinishModalTitle {
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    span {font-weight: 900;}
+    &:first-child {margin-bottom: 14px;}
+  }
+
+  @media screen and (max-width: 1620px) {
+    .ModalTitle {
+      font-size: calc(100vw*(34/1620));
+      margin-top: calc(100vw*(55/1620));
+    }
+    .FinishModalTitle {
+      font-size: calc(100vw*(32/1620));
+      &:first-child {margin-bottom: calc(100vw*(14/1620));}
+    }
+  }
+}
+.ModalInner {
+  width: 100%;
+  padding: 52px 0 20px;
+  @media screen and (max-width: 1620px) {
+      padding: calc(100vw*(52/1620)) 0 calc(100vw*(20/1620));
+  }
+}
+.ModalBtnBox {
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  text-align: center;
+  margin: 40px auto 0;
+  p {
+    width: 158px;
+    font-size: 18px;
+    text-align: center;
+    padding: 6px 0;
+    border: 2px solid #000000;
+    cursor: pointer;
+    &:last-child {background: #A0FE64;}
+  }
+  
+  @media screen and (max-width: 1620px) {
+    width: calc(100vw*(350/1620));
+    margin: calc(100vw*(40/1620)) auto 0;
+    p {
+      width: calc(100vw*(158/1620));
+      font-size: calc(100vw*(22/1620));
+      padding: calc(100vw*(6/1620)) 0;
+    }
+  }
+}
+.ModalFinishBtnBox {
+  width: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-align: center;
+  margin: 40px auto 0;
+  p {
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+    padding: 13px 0;
+    border: 2px solid #000000;
+    cursor: pointer;
+    &:last-child {background: #04F404;}
+  }
+  
+  @media screen and (max-width: 1620px) {
+    width: calc(100vw*(380/1620));
+    margin: calc(100vw*(40/1620)) auto 0;
+    p {
+      font-size: calc(100vw*(22/1620));
+      padding: calc(100vw*(12/1620)) 0;
+    }
+  }
+}

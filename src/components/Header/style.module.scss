@@ -1,0 +1,65 @@
+.HeaderContainer {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  width: 1368px; height: 60px;
+  margin: 45px auto 0;
+  z-index: 99999;
+  .HomeBtnBox {
+    position: absolute; left: 0;
+    width: 60px;
+    cursor: pointer;
+    & img {width: 100%;}
+  }
+  .Price {
+    position: absolute; right: 0;
+    width: 70px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .StepBox {
+    position: absolute; top: 0; left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 704px; min-width: 345px; height: 2px;
+    background: #000;
+    transform: translateX(-50%);
+    div {
+      width: 18px; height: 18px;
+      background: #fff;
+      border: 2px solid #000000;
+      margin-right: 118px;
+      &:last-child {margin-right: 0;}
+    }
+  }
+
+
+  @media screen and (max-width: 1620px) {
+    width: calc(100vw*(1368/1620)); height: calc(100vw*(80/1620));
+    margin: calc(100vw*(70/1620)) auto 0;
+    .HomeBtnBox {
+      position: absolute; left: 0;
+      width: calc(100vw*(60/1620));
+      cursor: pointer;
+      & img {
+        width: calc(100vw*(80/1620));
+        &:last-child {margin-top: calc(100vw*(24/1620));}
+      }
+    }
+    .Price {
+      top: 0;
+      width: calc(100vw*(70/1620));
+      padding: 0;
+    }
+    .StepBox {
+      top: calc(100vw*(2/1620));
+      max-width: calc(100vw*(704/1620)); min-width: calc(100vw*(345/1620)); height: calc(100vw*(2/1620));
+      div {
+        width: calc(100vw*(18/1620)); height: calc(100vw*(18/1620));
+        border: calc(100vw*(2/1620)) solid #000000;
+        margin-right: calc(100vw*(118/1620));
+      }
+    }
+  }
+}

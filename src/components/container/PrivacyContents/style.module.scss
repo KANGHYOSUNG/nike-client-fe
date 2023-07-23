@@ -1,0 +1,143 @@
+.PrivacyContainer {
+    width: 100%;
+    padding-top: 110px;
+    padding-bottom: 200px;
+    width: 100%;
+    
+    @media screen and (max-width: 1620px) {
+        padding-top: calc(100vw*(50/1620));
+        padding-bottom: calc(100vw*(20/1620));
+    }
+}
+.PrivacyTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 95px;
+    p {background: #ffffff; padding: 40px;}
+
+    @media screen and (max-width: 1620px) {
+        font-size: calc(100vw*(60/1620));
+        padding: calc(100vw*(16/1620));
+        margin-bottom: calc(100vw*(95/1620));
+        p {padding: calc(100vw*(40/1620));}
+    }
+}
+
+.LangBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-family:'Neue';
+    text-align: center;
+    margin-bottom: 40px;
+    p {
+        background: #ffffff; width: 80px;
+        padding: 2px 0; text-align: center; border: 2px solid #000;
+        &:first-child {border-right: none;}
+    }
+
+    @media screen and (max-width: 1620px) {
+        font-size: calc(100vw*(40/1620));
+        margin-bottom: calc(100vw*(40/1620));
+        p {
+            width: calc(100vw*(80/1620)); 
+            padding: calc(100vw*(8/1620));
+        }
+    }
+}
+
+.PrivacyWrapper {
+    width: 910px;
+    margin: 0 auto 150px;
+    border: 2px solid #000000;
+    height: calc(100vw*(878/1620));
+    overflow-y: scroll;
+    .PrivacyTop {
+        width: 100%; height: 30px;
+        background: #04F404;
+    }
+    .PrivacyBox {
+        width: 100%;
+        padding: 35px 40px;
+        border-top: 2px solid #000000;
+        background-color: #ffffff;
+        p {font-size: 24px; line-height: 1.6;}
+        p.BoxTitle {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+        p.BoldText {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        p.BoxText {
+            margin-bottom: 14px;
+        }
+        .ChkBox {
+            display: flex;
+            align-items: center;
+            margin: 40px 0 80px;
+            input {
+                width: 25.8px;
+                height: 25.8px;
+                display: none;
+                &:checked + label .chk {
+                    background: #fff url('/resources/icon/icon_check.svg') no-repeat center/24px;
+                }
+            }
+            label {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+            }
+            .chk {
+                width: 40px; height: 40px;
+                background: #ffffff;
+                border: 1px solid #000000;
+            }
+            p {
+                font-size: 24px;
+                font-weight: bold;
+                margin-left: 15px;
+                word-break: keep-all;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 1620px) {
+        width: calc(100vw*(1050/1620));
+        margin: 0 auto calc(100vw*(150/1620));
+        .PrivacyTop {
+            height: calc(100vw*(30/1620));
+        }
+        .PrivacyBox {
+            padding: calc(100vw*(44/1620)) calc(100vw*(64/1620));
+            p {font-size: calc(100vw*(28/1620));}
+            p.BoxTitle {
+                font-size: calc(100vw*(32/1620));
+                margin-bottom: calc(100vw*(18/1620));
+            }
+            p.BoxText {
+                margin-bottom: calc(100vw*(14/1620));
+            }
+            .ChkBox {
+                margin: calc(100vw*(40/1620)) 0 calc(100vw*(80/1620));
+                .chk {
+                    width: 25.8px;
+                    height: 25.8px;
+                }
+                p {
+                    font-size: calc(100vw*(28/1620));
+                    margin-left: calc(100vw*(15/1620));
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,355 @@
+.CustomWrap {
+    width: 100%;
+    .CustomInner {
+        // overflow: hidden;
+        position: relative;
+        width: 1256px; 
+        margin: 0 auto;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+
+        a{
+            position: absolute; bottom: 43px; right: 43px;
+        }
+
+        .ResetBtn {
+            position: absolute; bottom: 43px; right: 43px;
+            width: 56px; height: auto;
+            cursor: pointer;
+            z-index: 13;
+        }
+        .DeleteBtn {
+            position: absolute; bottom: 43px; right: 43px;
+            width: 56px; height: auto;
+            cursor: pointer;
+            z-index: 13;
+        }
+        .Canvas {
+            position:absolute;
+            overflow: hidden;
+            width: 900px; 
+            height: calc(900px*(2000/1620));
+            z-index: 12;
+            align-items: center;
+            justify-content: center;
+        }
+        .FrontBtn {
+            & a {
+                display: flex; align-items: center; justify-content: center;
+                font-family: 'Neue';
+                font-weight: normal;
+                line-height: 1;
+                padding-top:7px;
+            }
+        }
+    }
+    .TabContainer {
+        width: 100%;
+    }
+    
+    @media screen and (max-width: 1620px) {
+        .CustomInner {
+            width: calc(100vw*(1368/1620));
+            .ResetBtn {
+                bottom: calc(100vw*(43/1620)); right: calc(100vw*(43/1620));
+                width: calc(100vw*(60/1620)); height: auto;
+            }
+            .DeleteBtn {
+                bottom: calc(100vw*(130/1620)); right: calc(100vw*(43/1620));
+                width: calc(100vw*(60/1620)); height: auto;
+            }
+
+            a {
+                top: calc(100vw*(107/1620)); 
+                right: calc(100vw*(43/1620));
+                box-sizing: border-box;
+                width: calc(100vw*(60/1620)); 
+                height: calc(100vw*(60/1620)); 
+                padding: calc(100vw*(2/1620)) 0;
+                background: #fff;
+                border: 1px solid #000000;
+                font-size: 32px;
+                font-weight: 900;
+                text-align: center;
+                font-family:'HelveticaNeue';
+                &:first-child {
+                    top: calc(100vw*(47/1620));
+                }
+            }
+
+            .Active{
+                color:white;
+                background-color: black;
+            }
+
+            .CanvasSection {
+                position:absolute;
+                width: 100%; height: 100%;
+                margin:0 auto;
+                z-index: 12;
+            }
+            .Canvas {
+                overflow: hidden;
+                width: 900px; 
+                height: calc(900px*(2000/1620));
+            }
+            .FrontBtn {
+                z-index: 99999;
+                & a {
+                    font-size: calc(450px*(80/1620));
+                }
+            }
+        }
+    }
+}
+
+
+.NoteInner {
+    position: relative;
+    display: block;
+    font-size: 12px;
+    font-family:'HelveticaNeue_bold';
+    font-weight: 900;
+    color: #EBEBEC;
+    width: 100vw;
+    text-align: center;
+    
+    @media screen and (max-width: 1620px) {
+        font-size: calc(100vw*(33/1620));
+        line-height: 1;
+        bottom:20px;
+    }
+}
+
+
+.CustomBox {
+    width: 100%; height: 705px;
+    margin: 0 auto;
+    border: 1px solid #000000;
+    background: #ffffff;
+    
+    @media screen and (max-width: 1620px) {
+        height: calc(100vw*(600/1620));
+    }
+}
+.TabWrap {
+    width: 100%;
+    margin-bottom: 65px;
+    
+    @media screen and (max-width: 1620px) {
+        // width: calc(100vw*(1368/1620));
+        margin: 0 auto calc(100vw*(65/1620));
+    }
+}
+.TabButtonBox {
+    position: relative;
+    width: 100%; height: 80px;
+    margin-top: 30px;
+    > .TabButton {
+        position: absolute; bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // min-width: 50%;
+        width: 410px; height: 64px;
+        padding: 0 30px;
+        background: #EBEBEC;
+        border: 2px solid #000000;
+        border-bottom: none;
+        box-sizing: border-box;
+        cursor: pointer;
+        p {white-space: nowrap;}
+    
+        // active css
+        &:first-child {
+            width: 51%; height: 80px;
+            background: #04F404;
+            z-index: 2;
+            p {font-size: 32px;}
+            p:first-child {font-size: 36px;}
+        }
+        &:last-child {
+            right: 0; 
+            p {font-size: 24px;}
+            p:first-child {font-size: 28px;}
+        }
+        &:only-child {
+            width: 58%;
+            left: 0;
+            padding: 0 50px;
+            margin-left: calc(100vw*(214/1620));
+            p {font-size: 32px;}
+            p:first-child {font-size: 36px;}
+        }
+        p:first-child {font-weight: bold; font-family:'HelveticaNeue_bold'; letter-spacing: -0.8px;}
+    }
+  
+    @media screen and (max-width: 1620px) {
+        height: calc(100vw*(80/1620));
+        margin-top: calc(100vw*(30/1620));
+        > .TabButton {
+            width: calc(100vw*(450/1620));
+            height: calc(100vw*(64/1620));
+            padding: 0 calc(100vw*(28/1620));
+        
+            &:first-child {
+                width: 58%;
+                height: calc(100vw*(80/1620));
+                p {width: 100%; text-align: center; font-size: calc(100vw*(34/1620));}
+                p:first-child {font-size: calc(100vw*(38/1620));}
+            }
+            &:last-child {
+                p {width: 100%; text-align: center; font-size: calc(100vw*(26/1620));}
+                p:first-child {font-size: calc(100vw*(30/1620));}
+            }
+            &:only-child {
+                width: 60%;
+                padding: 0 calc(100vw*(50/1620));
+                margin-left: calc(100vw*(214/1620));
+                p {width: 100%; text-align: center; font-size: calc(100vw*(34/1620));}
+                p:first-child {font-size: calc(100vw*(38/1620));}
+            }
+            // p:first-child {margin-right: calc(100vw*(22/1620));}
+        }
+    }
+}
+.TabArea {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%; height: 238px;
+    border: 2px solid #000000;
+    background: #ffffff;
+    overflow: hidden;
+    
+    @media screen and (max-width: 1620px) {
+        height: calc(100vw*(238/1620));
+    }
+}
+.PreBox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%; height: 100%;
+    .SlideImgBox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 100%; height: 80%;
+            object-fit: contain;
+            cursor: pointer;
+        }
+    }
+}
+.PenBox {
+    position: relative;
+    width: 348px; height: 100%;
+    overflow: hidden;
+    img {
+        position: absolute;
+        cursor: pointer;
+        &:first-child {bottom: -50px; left: 50px; width: 54px;}
+        &:nth-child(2) {bottom: -80px; left: 125px; width: 50px;}
+        &:last-child {bottom: -35px; left: 190px; width: 65px;}
+    }
+
+    @media screen and (max-width: 1620px) {
+        width: calc(100vw*(348/1620));
+        img {
+            &:first-child {bottom: calc(100vw*(-50/1620)); left: calc(100vw*(50/1620)); width: calc(100vw*(54/1620));}
+            &:nth-child(2) {bottom: calc(100vw*(-80/1620)); left: calc(100vw*(50/1620)); width: calc(100vw*(50/1620));}
+            &:last-child {bottom: calc(100vw*(-35/1620)); left: calc(100vw*(190/1620)); width: calc(100vw*(65/1620));}
+        }
+    }
+}
+.DrawLineBox {
+    width: 548px;
+    .LineBox {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%; height: 88px;
+        i {
+            position: absolute; width: 20px; height: 20px;
+            &:nth-child(1) {top: 0; left: 0; border-top: 4px solid #000000; border-left: 4px solid #000000;}
+            &:nth-child(2) {top: 0; right: 0; border-top: 4px solid #000000; border-right: 4px solid #000000;}
+            &:nth-child(3) {bottom: 0; right: 0; border-bottom: 4px solid #000000; border-right: 4px solid #000000;}
+            &:nth-child(4) {bottom: 0; left: 0; border-bottom: 4px solid #000000; border-left: 4px solid #000000;}
+        }
+        img {width: 265px;}
+    }
+    .DrawBox {
+        position: relative;
+        width: 100%; height: 4px;
+        background: #000;
+        margin-top: 45px;
+        img {
+            position: absolute; top: 50%; left: 0;
+            width: 36px; height: 36px;
+            transform: translateY(-50%);
+            cursor: grab;
+        }
+    }
+
+    @media screen and (max-width: 1620px) {
+        width: calc(100vw*(548/1620));
+        .LineBox {
+            height: calc(100vw*(88/1620));
+            i {
+                width: calc(100vw*(20/1620)); height: calc(100vw*(20/1620));
+                &:nth-child(1) {border-top: calc(100vw*(4/1620)) solid #000000; border-left: calc(100vw*(4/1620)) solid #000000;}
+                &:nth-child(2) {border-top: calc(100vw*(4/1620)) solid #000000; border-right: calc(100vw*(4/1620)) solid #000000;}
+                &:nth-child(3) {border-bottom: calc(100vw*(4/1620)) solid #000000; border-right: calc(100vw*(4/1620)) solid #000000;}
+                &:nth-child(4) {border-bottom: calc(100vw*(4/1620)) solid #000000; border-left: calc(100vw*(4/1620)) solid #000000;}
+            }
+            & img {width: calc(100vw*(280/1620));}
+        }
+        .DrawBox {
+            height: calc(100vw*(4/1620));
+            margin-top: calc(100vw*(45/1620));
+            img {
+                width: calc(100vw*(36/1620)); height: calc(100vw*(36/1620));
+            }
+        }
+
+    }
+}
+.ColorPickerBox {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 100px;
+    cursor: pointer;
+    img {
+        position: static;
+        width: 128px;
+    }
+    @media screen and (max-width: 1620px) {
+        padding: 0 calc(100vw*(100/1620));
+        img {
+            width: calc(100vw*(128/1620));
+        }
+    }
+}
+
+.RatioBox {
+    position: absolute; 
+    bottom: 43px; 
+    left: 43px;
+    display: flex;
+    flex-direction: column; gap: calc(100vw*(27/1620));
+    z-index: 999;
+
+    @media screen and (max-width: 1620px) {
+        bottom: calc(100vw*(43/1620)); left: calc(100vw*(43/1620));
+        img {
+            width: calc(100vw*(60/1620)) !important;
+            cursor: pointer;
+        }
+    }
+}
