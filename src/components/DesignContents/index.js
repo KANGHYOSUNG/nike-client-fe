@@ -140,7 +140,7 @@ function DesignContents() {
         const formData = new FormData();
         formData.append('images', file);
         await API.uploadImage(file)
-        return {img: "http://localhost:5000/static/img/"+file.name};
+        return {img: "https://nsh-2f-flask.event-pages.com/static/img/"+file.name};
     }
 
 
