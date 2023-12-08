@@ -36,8 +36,8 @@ function MenuPage() {
                                     }}>
                                         <MainMenu>
                                             <div className={styles.MenuTextBox}>
-                                                <p className={styles.MenuTitle}>{value.title}</p>
-                                                <p className={styles.MenuText}>{value.text}</p>
+                                                <p className={styles.MenuTitle}>{value.text}</p>
+                                                <p className={styles.MenuText}>{value.title}</p>
                                             </div>
                                         </MainMenu>
                                     </div>

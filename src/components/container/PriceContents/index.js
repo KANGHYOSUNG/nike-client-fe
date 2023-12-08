@@ -57,21 +57,21 @@ function PriceContents() {
                     <div className={styles.Price}><p><span>(1면 기준) </span>15,000 원</p></div>
                 </div>
 
-                <div className={styles.PriceRow}>
-                    <div className={styles.PriceTitleBox}>
-                        <p>HAND JET PRINT</p>
-                        <p>핸드젯 프린트</p>
-                    </div>
-                    <div className={styles.Price}><p><span>(3회) </span>3,000 원</p></div>
-                </div>
+                {/*<div className={styles.PriceRow}>*/}
+                {/*    <div className={styles.PriceTitleBox}>*/}
+                {/*        <p>HAND JET PRINT</p>*/}
+                {/*        <p>핸드젯 프린트</p>*/}
+                {/*    </div>*/}
+                {/*    <div className={styles.Price}><p><span>(3회) </span>3,000 원</p></div>*/}
+                {/*</div>*/}
 
-                <div className={styles.PriceRow}>
-                    <div className={styles.PriceTitleBox}>
-                        <p>EMBROIDERY</p>
-                        <p>자수</p>
-                    </div>
-                    <div className={styles.Price}><p><span></span>3,000 원</p></div>
-                </div>
+                {/*<div className={styles.PriceRow}>*/}
+                {/*    <div className={styles.PriceTitleBox}>*/}
+                {/*        <p>EMBROIDERY</p>*/}
+                {/*        <p>자수</p>*/}
+                {/*    </div>*/}
+                {/*    <div className={styles.Price}><p><span></span>3,000 원</p></div>*/}
+                {/*</div>*/}
 
 
             </div>

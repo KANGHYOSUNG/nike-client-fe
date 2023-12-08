@@ -67,6 +67,7 @@ const useFabric = (state, assets, pageType) => {
     }
 
     function addImage(imageParam, value, isClear, isHold) {
+        console.log(imageParam, value, isClear, isHold)
         fabricRef.current.isDrawingMode = false;
 
         var image = new Image();
@@ -404,7 +405,7 @@ const useFabric = (state, assets, pageType) => {
 
     function changeDrawMode(_isDraw) {
         setIsDraw(_isDraw);
-        console.log(_isDraw)
+        // console.log(_isDraw)
         fabricRef.current.isDrawingMode = _isDraw;
         if(!_isDraw && fabricRef.current.setControlsVisibility){
             fabricRef.current.setControlsVisibility({

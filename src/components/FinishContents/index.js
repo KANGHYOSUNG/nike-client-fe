@@ -126,22 +126,6 @@ function FinishContents({disabled,title,buttonTitle}) {
                 </SelectLayout>
             </div>
 
-            <div className={styles.PriceBox}>
-                <BorderLayoutBox>
-                    <div className={styles.PriceTextBox}>
-                        {/* <p className={styles.Count}>수량 : <span className={styles.CountBtn}
-                                                               onClick={() => updateCount(-1)}>-</span> <b>{count}</b>
-                            <span className={styles.CountBtn} onClick={() => updateCount(1)}>+</span></p> */}
-                        <p className={styles.Price}>총 결제 금액 : <b>{getTotalPrice()}원</b></p>
-                        {
-                            /*
-                                <span className={styles.PriceSub} onClick={detailClick}>결제금액 상세보기</span>
-                             */
-                        }
-                    </div>
-                </BorderLayoutBox>
-            </div>
-
             <SelectButton disabled={disabled} title={buttonTitle} link={nextClick} next={true}/>
         </div>
     );
