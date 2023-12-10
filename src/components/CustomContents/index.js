@@ -252,7 +252,7 @@ const CustomContents = () => {
                 // onTouchMove={handleMove}
                 // onTouchEnd={ontouchEnd}
             >
-                <SelectLayout titleA={"CUSTOM"} titleC={"YOURSELF"} text={"자신만의 디자인을 만들어 보세요."} border={true} custom={true}>
+                <SelectLayout titleA={"CUSTOM"} titleC={"YOURSELF"} text={"자신만의 디자인을 만들어 보세요."} border={true} custom={true} isQrPage={type.toLowerCase() === "qr"}>
                     {
                         (type.toLowerCase() === "print" || type.toLowerCase() === "qr") ?
                          <div className={styles.FrontBtn}>
