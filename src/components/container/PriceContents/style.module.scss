@@ -11,6 +11,7 @@
     position: relative;
     width: 100%;
     margin: 0 auto;
+    margin-top: 200px;
     border: 2px solid #000000;
     margin-bottom: 200px;
     .BorderBox {
@@ -40,7 +41,8 @@
     padding: 0 35px;
     background-color: #ffffff;
     overflow-y: auto;
-    height: 50vh;
+    height: 7vh;
+    vertical-align: middle;
 
     .PriceRow {
         display: flex;
@@ -69,10 +71,12 @@
     }
 
     .PriceTitleBox {
+        margin-top: 20px;
         p {
             font-size: 25px;
             font-weight: 500;
-            text-align: left;
+            text-align: center;
+
             font-family: 'helveticaneue_m';
             &:first-child {
                 font-size: 42px;
