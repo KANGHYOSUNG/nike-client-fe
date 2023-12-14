@@ -5,7 +5,8 @@ import {SubTitle} from 'components';
 
 function SelectLayout({titleA,titleB,titleC,text,children,border,custom,isQrPage}) {
     const borderStyle = {border :"none"}
-    const marginStyle = isQrPage ? {marginRight : 70} : {margin : "0:0:0:auto"}
+    const marginStyle = isQrPage ? {margin : "0:0:0:auto"} : {margin : "0:0:0:auto"}
+    // const marginStyle = isQrPage ? {marginRight : 70} : {margin : "0:0:0:auto"}
     // console.log("isQrPage", isQrPage)
 
     return (

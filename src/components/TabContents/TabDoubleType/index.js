@@ -54,8 +54,8 @@ function TabDoubleType({ changePenType,lineWidth,setLineWidth,color,setColor,add
             pageType == "PRINT" &&
             tabClick(1)
 
-            pageType === "QR" &&
-            document.getElementById("uploadedImage").click()
+            // pageType === "QR" &&
+            // document.getElementById("uploadedImage").click()
 
             if(circleRef && circleRef.current){
                 circleRef.current.style = `${getHexToFilterCss(color)}`;
@@ -64,7 +64,7 @@ function TabDoubleType({ changePenType,lineWidth,setLineWidth,color,setColor,add
     },[color, getHexToFilterCss, penType])
 
     return (
-        <div className={styles.TabWrap} style={{display: pageType == 'PRINT' ? 'block' : 'none' }}>
+        <div className={styles.TabWrap} style={{display: pageType == 'PRINT' ? 'block' : 'block' }}>
             <div className={styles.TabBtnBox} style={{display: 'none' }}>
                 <div className={isTab === 1 ? styles.TabBtn : null} onClick={()=>{tabClick(1)}}>
                     <p>CUSTOM DRAWING</p>
@@ -94,8 +94,11 @@ function TabDoubleType({ changePenType,lineWidth,setLineWidth,color,setColor,add
                                         return (
                                             <SwiperSlide key={index + 'NBY 프리 디자인'}>
                                                 <div className={styles.SlideImgBox} >
-                                                    {index === 0 &&  <img id="uploadedImage" onClick={(e)=>{ addImage(e.target,value);}} src={value.img} alt="NBY 프리 디자인 이미지" />}
-                                                    {index !== 0 &&  <img onClick={(e)=>{ addImage(e.target,value);}} src={value.img} alt="NBY 프리 디자인 이미지" />}
+                                                    {/*{index === 0 &&  <img id="uploadedImage" onClick={(e)=>{ addImage(e.target,value);}} src={value.img} alt="NBY 프리 디자인 이미지" />}*/}
+                                                    {/*{index !== 0 &&  <img onClick={(e)=>{ addImage(e.target,value);}} src={value.img} alt="NBY 프리 디자인 이미지" />}*/}
+                                                    {index == 0 &&
+                                                        < img onClick={(e)=>{addImage(e.target,value);}} src={value.img} alt="NBY 프리 디자인 이미지" />
+                                                    }
                                                 </div>
                                             </SwiperSlide>
                                         )
